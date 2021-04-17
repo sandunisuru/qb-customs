@@ -90,7 +90,7 @@ CreateThread(function()
                     local playerPos = GetEntityCoords(customVehicle)
                     local tempActionDist = tempPos.actionDistance or Config.DefaultActionDistance
 
-                    local tempDist = GetDistanceBetweenCoords(playerPos.x, playerPos.y, playerPos.z, tempPos.pos.x, tempPos.pos.y, tempPos.pos.z, true)
+                    local tempDist = #(playerPos - vector3(tempPos.pos.x, tempPos.pos.y, tempPos.pos.z))
                     if (tempDist > tempActionDist) then
                         closeUI(1, 1)
                     end
