@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="cash" id="cash"></div>
+
+            <div class="detailCard" id="detailCard">
+                <div class="detailCard_name" id="detailCard_name"></div>
+
+                <div class="detailCard_stat">
+                    <div class="detailCard_stat_name">POWER</div>
+                    <div class="detailCard_stat_bar">
+                        <div class="detailCard_stat_bar_bar">
+                            <div class="detailCard_stat_bar_bg"></div>
+                            <div class="detailCard_stat_bar_front" style="width: 0%;" id="card_power_percent"></div>
+                        </div>
+
+                        <div class="detailCard_stat_bar_number" id="card_power_number">0.0</div>
+                    </div>
+                </div>
+
+                <div class="detailCard_stat">
+                    <div class="detailCard_stat_name">ACCELERATION</div>
+                    <div class="detailCard_stat_bar">
+                        <div class="detailCard_stat_bar_bar">
+                            <div class="detailCard_stat_bar_bg"></div>
+                            <div class="detailCard_stat_bar_front" style="width: 0%;" id="card_acceleration_percent"></div>
+                        </div>
+
+                        <div class="detailCard_stat_bar_number" id="card_acceleration_number">0.0</div>
+                    </div>
+                </div>
+
+                <div class="detailCard_stat">
+                    <div class="detailCard_stat_name">MAX SPEED</div>
+                    <div class="detailCard_stat_bar">
+                        <div class="detailCard_stat_bar_bar">
+                            <div class="detailCard_stat_bar_bg"></div>
+                            <div class="detailCard_stat_bar_front" style="width: 0%;" id="card_maxspeed_percent"></div>
+                        </div>
+
+                        <div class="detailCard_stat_bar_number" id="card_maxspeed_number">0.0</div>
+                    </div>
+                </div>
+
+                <div class="detailCard_stat">
+                    <div class="detailCard_stat_name">BREAKS</div>
+                    <div class="detailCard_stat_bar">
+                        <div class="detailCard_stat_bar_bar">
+                            <div class="detailCard_stat_bar_bg"></div>
+                            <div class="detailCard_stat_bar_front" style="width: 0%;" id="card_breaks_percent"></div>
+                        </div>
+
+                        <div class="detailCard_stat_bar_number" id="card_breaks_number">0.0</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class='colorPicker-holder' id='colorPicker-holder'>
+                <div class='colorPicker-title' id='colorPicker-title'></div>
+                <div class='colorPicker-price' id='colorPicker-price'></div>
+
+                <div id='colorPicker-container'>
+                </div>
+            </div>
+
+            <div class="options">
+                <div class="options_title" id="options_title"></div>
+
+                <div class="options_container" id="options_container" tabindex="-1">
+                </div>
+
+                <div class="options_subTitle" id="options_subTitle"></div>
+            </div>
+
+            <div class="buttonHelpers" id="buttonHelpers">
+                <span><img src="img/buttons/esc.png">CLOSE</span>
+                <span><img src="img/buttons/enter.png">SELECT</span>
+                <span><img src="img/buttons/backspace.png">BACK</span>
+                <span><img src="img/buttons/c.png">CHANGE VIEW</span>
+                <span><img src="img/buttons/g.png">TOGGLE STATS</span>
+            </div>
+        </div>
+        
+        <script src="nui://game/ui/jquery.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>
