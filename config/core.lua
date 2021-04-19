@@ -32,7 +32,7 @@ Config.DefaultBlip = {
 -- if any position miss the "actionDistance" will be the default as seen above "Config.DefaultActionDistance"
 Config.Positions = {
     { -- bennys
-        pos = {x = -212.1, y = -1324.24, z = 30.69},
+        pos = {x = -338.93, y = -135.96, z = 38.33},
         whitelistJobName = 'mechanic',
         blip = {
             enable = true,
@@ -43,9 +43,9 @@ Config.Positions = {
         },
         actionDistance = 7.0
     },
-    { -- ls customs
+--[[     { -- ls customs
         pos = {x = -338.93, y = -135.96, z = 38.33}
-    },
+    }, ]]
     { -- paleto
         pos = {x = 110.89, y = 6626.35, z = 31.10}
     },

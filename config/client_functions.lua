@@ -3,5 +3,5 @@ function getPlayerCashMoney()
 end
 
 function saveVehicleData(vehicle)
-    QBCore.Functions.ExecuteSql(false, "UPDATE `player_vehicles` SET `mods` = '"..json.encode(vehicle).."' WHERE `plate` = '"..vehicle.plate.."'")
+    TriggerServerEvent("qb-customs:server:SaveVehicleProps", QBCore.Functions.GetVehicleProperties(vehicle))
 end
