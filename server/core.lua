@@ -29,6 +29,6 @@ AddEventHandler('qb-customs:server:SaveVehicleProps', function(vehicleProps)
     if IsVehicleOwned(vehicleProps.plate) then
         QBCore.Functions.ExecuteSql(false, "UPDATE `player_vehicles` SET `mods` = '"..json.encode(vehicleProps).."' WHERE `plate` = '"..vehicleProps.plate.."'")
     else
-        TriggerClientEvent('QBCore:Notify', src, 'You Dont Own This Vehicle', 'error')
+        TriggerClientEvent('QBCore:Notify', src, 'No Owner - Mods Not Saved', 'error')
     end
 end)
