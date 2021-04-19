@@ -8,25 +8,17 @@ CreateThread(function()
 		TriggerEvent('QBCore:GetObject', function(obj) QBCore = obj end)
 		Wait(100)
     end
-    
-    while (QBCore.Functions.GetPlayerData() == nil or QBCore.Functions.GetPlayerData().job == nil or QBCore.Functions.GetPlayerData().job.name == nil) do
-		Wait(100)
-	end
-
-    PlayerData = QBCore.Functions.GetPlayerData()
-    
-    jobName = getJobName()
-    updateUICurrentJob()
 end)
 
 RegisterNetEvent('QBCore:Client:OnPlayerLoaded')
 AddEventHandler('QBCore:Client:OnPlayerLoaded', function(xPlayer)
     PlayerData = xPlayer
+    updateUICurrentJob()
 end)
 
 RegisterNetEvent('QBCore:Client:OnJobUpdate')
-AddEventHandler('QBCore:Client:OnJobUpdate', function(job)
-    PlayerData.job = job
+AddEventHandler('QBCore:Client:OnJobUpdate', function(JobInfo)
+    PlayerData.job = JobInfo
     jobName = getJobName()
     updateUICurrentJob()
 end)
